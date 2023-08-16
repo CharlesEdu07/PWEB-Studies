@@ -1,0 +1,21 @@
+p.verse {
+  color: blue;
+}
+
+p.motto {
+  color: red;
+}
+
+a.author_link {
+    color: blue;
+    text-decoration: none;
+}
+
+a.author_link:hover {
+    color: red;
+    text-decoration: underline;
+}
+
+a.authour_link:visited {
+    color: purple;
+}
