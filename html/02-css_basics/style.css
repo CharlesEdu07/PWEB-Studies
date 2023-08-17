@@ -1,3 +1,18 @@
+body {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.poem {
+  font-family: "Times New Roman", Times, serif;
+  font-size: 1.2em;
+  line-height: 1.5em;
+  margin: 0 auto;
+  width: 50%;
+  text-align: center;
+}
+
 p.verse {
   color: blue;
 }
@@ -7,15 +22,73 @@ p.motto {
 }
 
 a.author_link {
-    color: blue;
-    text-decoration: none;
+  color: blue;
+  text-decoration: none;
+  font-size: 20px;
 }
 
 a.author_link:hover {
-    color: red;
-    text-decoration: underline;
+  color: red;
+  text-decoration: underline;
 }
 
 a.authour_link:visited {
-    color: purple;
+  color: purple;
+}
+
+.profile img {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+#drinks {
+  font-family: Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+#drinks td,
+#drinks th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+#drinks tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+#drinks tr:hover {
+  background-color: #ddd;
+}
+
+#drinks th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: rgb(73, 215, 215);
+  color: white;
+}
+
+#drinks td {
+  width: 200px;
+}
+
+#drinks .link {
+  text-align: center;
+  color: blue;
+  text-decoration: none;
+}
+
+.row {
+  display: flex;
+}
+
+.column {
+  flex: 50%;
+  padding: 10px;
 }
