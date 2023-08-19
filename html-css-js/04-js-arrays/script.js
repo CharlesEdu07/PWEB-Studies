@@ -6,11 +6,18 @@ let loadBtn = document.getElementById("load-btn");
 let randBtnDiv = document.getElementById("rand-btn-div");
 
 function loadDiv() {
-  let tableHtml = `<table id="drinks"><thead><tr><th>Cervejas</th></tr></thead><tbody>`;
-  beers.forEach((beer) => {
-    tableHtml += `<tr><td>${beer}</td></tr>`;
-  });
-  tableHtml += `</tbody></table>`;
+  const tableHtml = `
+  <table id="drinks">
+    <thead>
+      <tr>
+        <th>Cervejas</th>
+      </tr>
+    </thead>
+    <tbody>
+      ${beers.map((beer) => `<tr><td>${beer}</td></tr>`).join("")}
+    </tbody>
+  </table>
+`;
 
   myDiv.innerHTML = tableHtml;
   sortBtnDiv.innerHTML = `<button id="sort-btn">Ordenar</button>`;
