@@ -18,7 +18,7 @@ function unloadDiv() {
 
 function changeDivState() {
   let btn = document.getElementById("load-btn");
-
+  
   unfade(document.getElementById("my-div"));
 
   if (btn.innerHTML === "Carregar") {
