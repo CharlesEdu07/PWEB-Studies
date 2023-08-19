@@ -1,0 +1,14 @@
+/* .new-div {
+  border: 1px solid black;
+  border-collapse: collapse;
+  margin-bottom: 5px; 
+} */
+
+#btn-div {
+  display: flex;
+  flex-direction: row;
+}
+
+#btn-div button {
+  margin-right: 5px;
+}
