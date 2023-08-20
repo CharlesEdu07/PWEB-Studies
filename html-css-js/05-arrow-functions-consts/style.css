@@ -41,6 +41,16 @@
   flex-direction: row;
 }
 
-#btn-div button {
-  margin-right: 5px;
+#btn-div a {
+  text-decoration: none;
+  padding: 5px;
+  margin: 0 5px;
+  color: blue;
+}
+
+#btn-div a:hover {
+  background-color: rgb(73, 215, 215);
+  color: blue;
+  border-radius: 5px;
+  cursor: pointer;
 }

@@ -20,8 +20,8 @@ const loadDiv = (objects) => {
 `;
 
   myDiv.innerHTML = tableHtml;
-  sortBtnDiv.innerHTML = `<button id="sort-btn">Ordenar</button>`;
-  randBtnDiv.innerHTML = `<button id="rand-btn">Aleatório</button>`;
+  sortBtnDiv.innerHTML = `<a id="sort-btn">Ordenar</a>`;
+  randBtnDiv.innerHTML = `<a id="rand-btn">Embaralhar</a>`;
 
   loadBtn.innerHTML = "Alterar";
 };
