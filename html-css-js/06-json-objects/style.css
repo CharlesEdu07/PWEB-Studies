@@ -1,0 +1,56 @@
+/* .new-div {
+  border: 1px solid black;
+  border-collapse: collapse;
+  margin-bottom: 5px; 
+} */
+
+#drinks {
+  font-family: Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 50%;
+}
+
+#drinks td,
+#drinks th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+#drinks tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+#drinks tr:hover {
+  background-color: #ddd;
+}
+
+#drinks th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: rgb(73, 215, 215);
+  color: white;
+}
+
+#drinks td {
+  width: 200px;
+}
+
+#btn-div {
+  display: flex;
+  flex-direction: row;
+}
+
+#btn-div a {
+  text-decoration: none;
+  padding: 5px;
+  margin: 0 5px;
+  color: blue;
+}
+
+#btn-div a:hover {
+  background-color: rgb(73, 215, 215);
+  color: blue;
+  border-radius: 5px;
+  cursor: pointer;
+}
