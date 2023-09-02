@@ -1,3 +1,24 @@
+const beers = [
+  {
+    name: "Guiness",
+    alcohol: "10%",
+    style: "Stout",
+    ibu: 45,
+  },
+  {
+    name: "Desperados",
+    alcohol: "6%",
+    style: "Lager",
+    ibu: 15,
+  },
+  {
+    name: "Becks",
+    alcohol: "5%",
+    style: "Pilsner",
+    ibu: 25,
+  },
+];
+
 ReactDOM.render(
   React.createElement(
     "h1",
@@ -14,7 +35,11 @@ ReactDOM.render(
   document.getElementById("app")
 );
 
-const drawTable = () => {
+const Header = () => {
+  return <h1>Minha tabela de bebidas</h1>;
+};
+
+const DrawTable = () => {
   return (
     <table>
       <thead>
@@ -43,4 +68,17 @@ const drawTable = () => {
   );
 };
 
-ReactDOM.render(drawTable(), document.getElementById("my-table"));
+const LoadBtn = () => {
+  const handleClick = () => {
+    ReactDOM.render(<DrawTable />, document.getElementById("my-table"));
+  };
+
+  return (
+    <button id="load-btn" onClick={handleClick}>
+      Carregar
+    </button>
+  );
+};
+
+ReactDOM.render(<Header />, document.getElementById("header"));
+ReactDOM.render(<LoadBtn />, document.getElementById("load-btn-div"));
