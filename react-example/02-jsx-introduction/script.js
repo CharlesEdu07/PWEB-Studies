@@ -51,18 +51,14 @@ const DrawTable = () => {
         </tr>
       </thead>
       <tbody>
-        <tr>
-          <td>1</td>
-          <td>João</td>
-          <td>25</td>
-          <td>São Paulo</td>
-        </tr>
-        <tr>
-          <td>2</td>
-          <td>Maria</td>
-          <td>30</td>
-          <td>Rio de Janeiro</td>
-        </tr>
+        {beers.map((beer, index) => (
+          <tr key={index}>
+            <td>{beer.name}</td>
+            <td>{beer.alcohol}</td>
+            <td>{beer.style}</td>
+            <td>{beer.ibu}</td>
+          </tr>
+        ))}
       </tbody>
     </table>
   );
