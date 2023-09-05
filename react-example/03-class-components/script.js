@@ -47,10 +47,10 @@ class DrawTable extends Component {
       <table>
         <thead>
           <tr>
-            <th>ID</th>
             <th>Nome</th>
-            <th>Idade</th>
-            <th>Cidade</th>
+            <th>Teor Alcoolico</th>
+            <th>Estilo</th>
+            <th>IBU</th>
           </tr>
         </thead>
         <tbody>
