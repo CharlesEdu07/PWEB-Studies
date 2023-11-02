@@ -21,13 +21,13 @@ export default function Movies({ initialData }) {
       <form onSubmit={handleSubmit}>
         <input
           type="text"
-          placeholder="Enter movie title"
+          placeholder="Nome do filme"
           value={searchTerm}
           onChange={(e) => setSearchTerm(e.target.value)}
         />
         <input
           type="text"
-          placeholder="Enter year"
+          placeholder="Ano"
           value={searchYear}
           onChange={(e) => setSearchYear(e.target.value)}
         />

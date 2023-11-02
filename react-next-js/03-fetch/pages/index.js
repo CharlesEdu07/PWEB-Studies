@@ -15,7 +15,9 @@ export default function Home() {
       <br></br>
       <Link href="/form">Form</Link>
       <br></br>
-      <Link href="/movies">Filmes</Link>
+      <Link href="/movies">Filmes carregados no servidor</Link>
+      <br></br>
+      <Link href="/movies2">Filmes carregados no cliente</Link>
       <div>
         <h1>Meu Aplicativo</h1>
         <CustomPage text="Este é um texto passado por uma propriedade." />
