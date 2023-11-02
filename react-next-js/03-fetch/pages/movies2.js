@@ -1,4 +1,5 @@
 import useSWR from "swr";
+import Link from "next/link";
 
 export default function Movies2() {
   const { data, error } = useSWR(
@@ -12,8 +13,11 @@ export default function Movies2() {
   return (
     <div>
       {data.Search.map((m) => (
-        <div>
-          {m.Title} --- {m.Year}
+        <div key={m.imdbID}>
+          <Link href={`/movies/${m.imdbID}`}>
+            <img src={m.Poster} alt={m.Title} />
+            <p>{m.Title}</p>
+          </Link>
         </div>
       ))}
     </div>
@@ -22,7 +26,6 @@ export default function Movies2() {
 
 async function fetcher(url) {
   const res = await fetch(url);
-
   const json = await res.json();
 
   return json;
