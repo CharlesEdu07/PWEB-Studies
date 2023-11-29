@@ -18,6 +18,8 @@ export default function Home() {
       <Link href="/movies">Filmes carregados no servidor</Link>
       <br></br>
       <Link href="/movies2">Filmes carregados no cliente</Link>
+      <br></br>
+      <Link href="/extremeip">Carregar dados de IP</Link>
       <div>
         <h1>Meu Aplicativo</h1>
         <CustomPage text="Este é um texto passado por uma propriedade." />

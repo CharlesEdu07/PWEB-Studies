@@ -33,16 +33,17 @@ export default function Movies() {
 
   return (
     <div>
+      <h1>Pesquise o filme</h1>
       <form>
         <input
           type="text"
-          placeholder="Movie Name"
+          placeholder="Nome do filme"
           value={searchTerm}
           onChange={(e) => setSearchTerm(e.target.value)}
         />
         <input
           type="text"
-          placeholder="Year"
+          placeholder="Ano"
           value={searchYear}
           onChange={(e) => setSearchYear(e.target.value)}
         />
