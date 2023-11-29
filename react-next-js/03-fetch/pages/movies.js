@@ -1,4 +1,5 @@
 import { useState } from "react";
+import Link from "next/link";
 
 export default function Movies({ initialData }) {
   const [data, setData] = useState(initialData);
@@ -41,14 +42,12 @@ export default function Movies({ initialData }) {
 function mapping(element) {
   return (
     <div key={element.imdbID}>
-      <div>
+      <Link href={`/movies/${element.imdbID}`}>
         <img src={element.Poster} alt={element.Title} />
-        <div>
-          <p>
-            {element.Title} --- {element.Year}
-          </p>
-        </div>
-      </div>
+        <p>
+          {element.Title} --- {element.Year}
+        </p>
+      </Link>
     </div>
   );
 }
