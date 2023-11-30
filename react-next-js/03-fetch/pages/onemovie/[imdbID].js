@@ -1,8 +1,10 @@
 import useSWR from "swr";
 import { useRouter } from "next/router";
 
-import { Button, Descriptions, Spin } from "antd";
+import { Button, Descriptions, Spin, Collapse } from "antd";
 import { ArrowLeftOutlined } from "@ant-design/icons";
+
+const { Panel } = Collapse;
 
 export default function MovieDetails({ imdbID }) {
   const router = useRouter();
@@ -24,17 +26,42 @@ export default function MovieDetails({ imdbID }) {
     </Button>
   );
 
+  <Collapse items={data} defaultActiveKey={["1"]} />;
+
   if (error) return <div>Falha na requisição...</div>;
   if (!data) return <Spin>Aguarde...</Spin>;
 
   return (
-    <div style={{ padding: 20 }}>
+    <div style={{ padding: 100 }}>
       <BackBtn onClick={handleBack}></BackBtn>
       <h1>{data.Title}</h1>
-      <img src={data.Poster} alt={data.Title} />
-      <p>{data.Plot}</p>
-      <p>{data.Runtime}</p>
-      <p>{data.Genre}</p>
+      <img src={data.Poster} alt={data.Title} style={{ marginBottom: 30 }} />
+
+      <Collapse defaultActiveKey={["1"]}>
+        <Panel header="Mostrar sinopse" key="1" style={{ fontSize: 20 }}>
+          <p style={{ fontSize: 20 }}>{data.Plot}</p>
+        </Panel>
+      </Collapse>
+
+      <Descriptions
+        title="Informações do filme"
+        bordered
+        column={1} // Fix the typo here
+        style={{ marginTop: 30 }}
+      >
+        <Descriptions.Item label="Diretor" style={{ fontSize: 20 }}>
+          {data.Director}
+        </Descriptions.Item>
+        <Descriptions.Item label="Lançamento" style={{ fontSize: 20 }}>
+          {data.Released}
+        </Descriptions.Item>
+        <Descriptions.Item label="Duração" style={{ fontSize: 20 }}>
+          {data.Runtime}
+        </Descriptions.Item>
+        <Descriptions.Item label="Gênero" style={{ fontSize: 20 }}>
+          {data.Genre}
+        </Descriptions.Item>
+      </Descriptions>
     </div>
   );
 }
