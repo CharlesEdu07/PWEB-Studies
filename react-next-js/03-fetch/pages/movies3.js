@@ -1,6 +1,7 @@
 import useSWR from "swr";
 import { useState } from "react";
 import { Button, Card, Spin, Row, Col } from "antd";
+import Link from "next/link";
 
 const { Meta } = Card;
 
@@ -23,14 +24,16 @@ export function TheMovies({ data, show }) {
   return (
     <div>
       {data.Search.map((movie) => (
-        <Card
-          key={movie.imdbID}
-          hoverable
-          style={{ width: 240, height: 500, float: "left", margin: 8 }}
-          cover={<img alt={movie.Title} src={movie.Poster} />}
-        >
-          <Meta title={movie.Title} description={movie.Year} />
-        </Card>
+        <Link href={`/onemovie/${movie.imdbID}`}>
+          <Card
+            key={movie.imdbID}
+            hoverable
+            style={{ width: 240, height: 500, float: "left", margin: 8 }}
+            cover={<img alt={movie.Title} src={movie.Poster} />}
+          >
+            <Meta title={movie.Title} description={movie.Year} />
+          </Card>
+        </Link>
       ))}
     </div>
   );
@@ -73,7 +76,7 @@ export default function Movies3() {
           </Spin>
         )}
         {error && (
-          <div style={{ marginTop: 20, color: "red", fontSize: 16 }}>
+          <div style={{ marginTop: 20, color: "blue", fontSize: 16 }}>
             Erro na pesquisa
           </div>
         )}

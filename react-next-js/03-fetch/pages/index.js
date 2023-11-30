@@ -17,9 +17,9 @@ export default function Home() {
       <br></br>
       <Link href="/movies">Filmes carregados no servidor (Movies1)</Link>
       <br></br>
-      <Link href="/movies2">Filmes carregados no cliente (Movies2)</Link>
+      <Link href="/movies2">Movies2</Link>
       <br></br>
-      <Link href="/movies3">Movies 3</Link>
+      <Link href="/movies3">Filmes carregados no cliente (Movies3)</Link>
       <br></br>
       <Link href="/extremeip">Carregar dados de IP</Link>
       <div>
