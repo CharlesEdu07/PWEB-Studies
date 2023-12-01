@@ -37,7 +37,7 @@ export default function MovieDetails({ imdbID }) {
       <h1>{data.Title}</h1>
       <img src={data.Poster} alt={data.Title} style={{ marginBottom: 30 }} />
 
-      <Collapse defaultActiveKey={["1"]}>
+      <Collapse defaultActiveKey={["2"]}>
         <Panel header="Mostrar sinopse" key="1" style={{ fontSize: 20 }}>
           <p style={{ fontSize: 20 }}>{data.Plot}</p>
         </Panel>
@@ -46,7 +46,7 @@ export default function MovieDetails({ imdbID }) {
       <Descriptions
         title="Informações do filme"
         bordered
-        column={1} // Fix the typo here
+        column={1}
         style={{ marginTop: 30 }}
       >
         <Descriptions.Item label="Diretor" style={{ fontSize: 20 }}>
